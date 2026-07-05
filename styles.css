@@ -178,6 +178,10 @@ main {
 .tape-top {
   top: -18px;
   transform: translateX(-50%) rotate(-4deg);
+  width: 120px;
+  height: 30px;
+  background: #DC143C;
+  opacity: 0.9;
 }
 
 .hero-name {
