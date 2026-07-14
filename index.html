@@ -16,16 +16,11 @@
     <div class="texture-bg"></div>
 
     <header class="site-header">
-      <div class="logo">dl*</div>
+      <a href="#home" class="logo">dl*</a>
       <nav class="main-nav">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
-        <div class="nav-link nav-portfolio">
-          <button class="nav-portfolio-btn" type="button">Portfolio ▾</button>
-          <ul class="nav-portfolio-menu">
-            <li>Скоро</li>
-          </ul>
-        </div>
+        <button class="nav-link nav-portfolio-btn" type="button">Portfolio</button>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </header>
@@ -46,8 +41,9 @@
 
             <div class="hero-work">
               <p>check out my work:</p>
-              <button class="hero-pill">personal projects</button>
-              <button class="hero-pill">client work</button>
+              <button class="hero-pill" type="button" id="personal-projects-btn">
+                personal projects
+              </button>
             </div>
           </div>
 
@@ -63,13 +59,13 @@
           <div class="hero-right-circle"></div>
         </div>
 
-        <div class="hero-bottom">
+         <!--<div class="hero-bottom">
           <div class="hero-column">
             <p class="hero-column-title">
               Want to hire me or work <span>together?</span>
             </p>
             <button class="btn primary-btn hero-cta">REACH OUT</button>
-          </div>
+          </div>-->
 
           <div class="hero-blob">
             <div class="hero-blob-top"></div>
@@ -91,62 +87,112 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              «Если вы согласитесь, чтобы я пожарил яичницу на Вашем сале, я разрешу вам сварить Ваше мясо в моем супе…».
+              «If you'll let me fry my eggs in your fat, I'll let you boil your meat in my soup...». 
             </p>
-          
           </div>
+        </div>
       </section>
 
       <section id="portfolio" class="section section-portfolio">
-        <h2 class="bubble-heading">ПОРТФОЛИО</h2>
-        <p class="coming-soon">
-          Портфолио скоро появится. Сейчас страница в разработке.
-        </p>
+        <h2 class="bubble-heading">PORTFOLIO</h2>
+
+        <div class="portfolio-carousel">
+          <button
+            class="carousel-btn carousel-btn-prev"
+            type="button"
+            aria-label="Previous photo"
+          >
+            ‹
+          </button>
+
+          <div class="carousel-viewport" tabindex="0">
+            <div class="carousel-track">
+              <button class="carousel-slide" type="button" data-index="0">
+                <img src="pictures/portfolio_photo/1.jpg" alt="Portfolio photo 1" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="1">
+                <img src="pictures/portfolio_photo/2.jpg" alt="Portfolio photo 2" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="2">
+                <img src="pictures/portfolio_photo/3.jpg" alt="Portfolio photo 3" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="3">
+                <img src="pictures/portfolio_photo/4.jpg" alt="Portfolio photo 4" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="4">
+                <img src="pictures/portfolio_photo/5.jpg" alt="Portfolio photo 5" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="5">
+                <img src="pictures/portfolio_photo/6.jpg" alt="Portfolio photo 6" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="6">
+                <img src="pictures/portfolio_photo/7.jpg" alt="Portfolio photo 7" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="7">
+                <img src="pictures/portfolio_photo/8.jpg" alt="Portfolio photo 8" />
+              </button>
+              <button class="carousel-slide" type="button" data-index="8">
+                <img src="pictures/portfolio_photo/9.jpg" alt="Portfolio photo 9" />
+              </button>
+            </div>
+          </div>
+
+          <button
+            class="carousel-btn carousel-btn-next"
+            type="button"
+            aria-label="Next photo"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="carousel-overlay" aria-hidden="true">
+          <img src="" alt="" />
+        </div>
       </section>
 
       <section id="contact" class="section section-contact">
-        <h2 class="bubble-heading">СВЯЗАТЬСЯ</h2>
+        <h2 class="bubble-heading">CONTACT</h2>
         <p class="contact-intro">
-          Пожалуйста, заполните форму ниже, чтобы связаться с Димой по поводу
-          съёмок или совместных проектов.
+           Please fill out the form below to get in touch with me about shoots or collaborations.
         </p>
 
         <form class="contact-form">
           <div class="form-row">
             <label class="field">
-              <span>Имя <span class="required">(обязательно)</span></span>
+              <span>First Name <span class="required">(required)</span></span>
               <input type="text" name="firstName" required />
             </label>
             <label class="field">
-              <span>Фамилия <span class="required">(обязательно)</span></span>
-              <input type="text" name="lastName" required />
+              <span>Last Name</span>
+              <input type="text" name="lastName" />
             </label>
           </div>
 
           <label class="field">
-            <span>Email <span class="required">(обязательно)</span></span>
+            <span>Email <span class="required">(required)</span></span>
             <input type="email" name="email" required />
           </label>
 
           <label class="field">
-            <span>Тема</span>
+            <span>Subject</span>
             <input type="text" name="subject" />
           </label>
 
           <label class="field">
-            <span>Сообщение <span class="required">(обязательно)</span></span>
+            <span>Message <span class="required">(required)</span></span>
             <textarea name="message" rows="4" required></textarea>
           </label>
 
           <button type="submit" class="btn primary-btn form-submit">
-            ОТПРАВИТЬ
+            SEND MESSAGE
           </button>
         </form>
 
         <div class="contact-footer">
-          <a href="#" class="text-link">Instagram</a>
+          <a href="https://www.instagram.com/m3lty_media?utm_source=qr" class="text-link" target="_blank" rel="noreferrer noopener">Instagram</a>
           <span class="stars">✶ ✶ ✶</span>
-          <a href="#" class="text-link">YouTube</a>
+          <!--<a href="#" class="text-link">YouTube</a>-->
         </div>
       </section>
     </main>
@@ -156,24 +202,143 @@
     </footer>
 
     <script>
+      function scrollToSection(id) {
+        const target = document.getElementById(id);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: "smooth",
+          });
+        }
+      }
+
       const navLinks = document.querySelectorAll(".nav-link[href^='#']");
       navLinks.forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
-          const id = link.getAttribute("href").slice(1);
-          const target = document.getElementById(id);
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 80,
-              behavior: "smooth",
-            });
-          }
+          scrollToSection(link.getAttribute("href").slice(1));
 
           navLinks.forEach((l) => l.classList.remove("active"));
           link.classList.add("active");
         });
       });
+
+      document
+        .getElementById("personal-projects-btn")
+        ?.addEventListener("click", () => scrollToSection("portfolio"));
+
+      document
+        .querySelector(".nav-portfolio-btn")
+        ?.addEventListener("click", () => scrollToSection("portfolio"));
+
+      const carouselSlides = Array.from(
+        document.querySelectorAll(".carousel-slide")
+      );
+      const carouselViewport = document.querySelector(".carousel-viewport");
+      const prevBtn = document.querySelector(".carousel-btn-prev");
+      const nextBtn = document.querySelector(".carousel-btn-next");
+      const slideCount = carouselSlides.length;
+      let activeIndex = 0;
+      let wheelLocked = false;
+
+      function getCircularOffset(index) {
+        let offset = index - activeIndex;
+        const limit = Math.floor(slideCount / 2);
+
+        while (offset > limit) offset -= slideCount;
+        while (offset < -limit) offset += slideCount;
+
+        return offset;
+      }
+
+      function updateCarousel() {
+        carouselSlides.forEach((slide, index) => {
+          const offset = getCircularOffset(index);
+          slide.dataset.offset = offset;
+          slide.classList.toggle("is-active", offset === 0);
+        });
+      }
+
+      function goToSlide(index) {
+        activeIndex = ((index % slideCount) + slideCount) % slideCount;
+        updateCarousel();
+      }
+
+      prevBtn.addEventListener("click", () => goToSlide(activeIndex - 1));
+      nextBtn.addEventListener("click", () => goToSlide(activeIndex + 1));
+
+      const overlay = document.querySelector(".carousel-overlay");
+      const overlayImage = overlay.querySelector("img");
+
+      function openOverlay(imgSrc, imgAlt) {
+        overlayImage.src = imgSrc;
+        overlayImage.alt = imgAlt;
+        overlay.classList.add("open");
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove("open");
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      carouselSlides.forEach((slide) => {
+        slide.addEventListener("click", () => {
+          const index = Number(slide.dataset.index);
+          const offset = getCircularOffset(index);
+          if (offset !== 0) {
+            goToSlide(index);
+            return;
+          }
+
+          const img = slide.querySelector("img");
+          if (img) {
+            openOverlay(img.src, img.alt);
+          }
+        });
+      });
+
+      overlay.addEventListener("click", closeOverlay);
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && overlay.classList.contains("open")) {
+          closeOverlay();
+        }
+      });
+
+      carouselViewport.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        if (wheelLocked) return;
+
+        wheelLocked = true;
+        if (event.deltaY > 0 || event.deltaX > 0) {
+          goToSlide(activeIndex + 1);
+        } else {
+          goToSlide(activeIndex - 1);
+        }
+
+        window.setTimeout(() => {
+          wheelLocked = false;
+        }, 350);
+      });
+
+      let touchStartX = 0;
+      carouselViewport.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+      });
+
+      carouselViewport.addEventListener("touchend", (event) => {
+        const delta = event.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(delta) < 40) return;
+        if (delta < 0) {
+          goToSlide(activeIndex + 1);
+        } else {
+          goToSlide(activeIndex - 1);
+        }
+      });
+
+      updateCarousel();
     </script>
   </body>
 </html>
-
