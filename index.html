@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Dima Lavrov — Photographer & Filmmaker</title>
@@ -18,30 +18,33 @@
     <header class="site-header">
       <a href="#home" class="logo">dl*</a>
       <nav class="main-nav">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <button class="nav-link nav-portfolio-btn" type="button">Portfolio</button>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#home" class="nav-link active" data-en="Home" data-ru="Главная">Home</a>
+        <a href="#about" class="nav-link" data-en="About" data-ru="Обо мне">About</a>
+        <button class="nav-link nav-portfolio-btn" type="button" data-en="Portfolio" data-ru="Портфолио">Portfolio</button>
+        <a href="#contact" class="nav-link" data-en="Contact" data-ru="Контакты">Contact</a>
       </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" type="button" data-lang="en">EN</button>
+        <button class="lang-btn" type="button" data-lang="ru">RU</button>
+      </div>
     </header>
 
     <main>
       <section id="home" class="section section-home">
         <div class="hero">
           <div class="hero-left">
-            <div class="hero-name">
-              <span>DIMA</span>
-              <span>LAVROV</span>
+           <div class="hero-name">
+              <span data-en="DIMA" data-ru="ДИМА">DIMA</span>
+              <span data-en="LAVROV" data-ru="ЛАВРОВ">LAVROV</span>
             </div>
-
             <div class="hero-meta">
-              <p>dude with a camera</p>
-              <p>(& more)</p>
+              <p data-en="dude with a camera" data-ru="чувак с камерой">dude with a camera</p>
+              <p data-en="(and more)" data-ru="(и много всего ещё)">(&amp; more)</p>
             </div>
 
             <div class="hero-work">
-              <p>check out my work:</p>
-              <button class="hero-pill" type="button" id="personal-projects-btn">
+              <p data-en="check out my work:" data-ru="">check out my work:</p>
+              <button class="hero-pill" type="button" id="personal-projects-btn" data-en="personal projects" data-ru="проекты">
                 personal projects
               </button>
             </div>
@@ -83,10 +86,10 @@
       </section>
 
       <section id="about" class="section section-about">
-        <h2 class="bubble-heading">ABT ME</h2>
+        <h2 class="bubble-heading" data-en="ABT ME" data-ru="ВСЁ, ЧТО НУЖНО ЗНАТЬ ОБО МНЕ">ABT ME</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>
+            <p data-en="«If you'll let me fry my eggs in your fat, I'll let you boil your meat in my soup...». " data-ru="«Если вы согласитесь, чтобы я пожарил яичницу на Вашем сале, я разрешу вам сварить Ваше мясо в моем супе...». ">
               «If you'll let me fry my eggs in your fat, I'll let you boil your meat in my soup...». 
             </p>
           </div>
@@ -94,7 +97,7 @@
       </section>
 
       <section id="portfolio" class="section section-portfolio">
-        <h2 class="bubble-heading">PORTFOLIO</h2>
+        <h2 class="bubble-heading" data-en="PORTFOLIO" data-ru="ПОРТФОЛИО">PORTFOLIO</h2>
 
         <div class="portfolio-carousel">
           <button
@@ -152,39 +155,52 @@
       </section>
 
       <section id="contact" class="section section-contact">
-        <h2 class="bubble-heading">CONTACT</h2>
-        <p class="contact-intro">
+        <h2 class="bubble-heading" data-en="CONTACT" data-ru="СВЯЗАТЬСЯ">CONTACT</h2>
+        <p class="contact-intro" data-en="Please fill out the form below to get in touch with me about shoots or collaborations." data-ru="Пожалуйста, заполните форму ниже, чтобы связаться со мной по поводу сессий или сотрудничества.">
            Please fill out the form below to get in touch with me about shoots or collaborations.
         </p>
 
         <form class="contact-form">
           <div class="form-row">
             <label class="field">
-              <span>First Name <span class="required">(required)</span></span>
+              <div class="field-heading">
+                <span class="field-label" data-en="First Name" data-ru="Имя">First Name</span>
+                <span class="required" data-en="(required)" data-ru="(required)">(required)</span>
+              </div>
               <input type="text" name="firstName" required />
             </label>
             <label class="field">
-              <span>Last Name</span>
+              <div class="field-heading">
+                <span class="field-label" data-en="Last Name" data-ru="Фамилия">Last Name</span>
+              </div>
               <input type="text" name="lastName" />
             </label>
           </div>
 
           <label class="field">
-            <span>Email <span class="required">(required)</span></span>
+            <div class="field-heading">
+              <span class="field-label" data-en="Email" data-ru="Электронная почта">Email</span>
+              <span class="required" data-en="(required)" data-ru="(required)">(required)</span>
+            </div>
             <input type="email" name="email" required />
           </label>
 
           <label class="field">
-            <span>Subject</span>
+            <div class="field-heading">
+              <span class="field-label" data-en="Subject" data-ru="Тема">Subject</span>
+            </div>
             <input type="text" name="subject" />
           </label>
 
           <label class="field">
-            <span>Message <span class="required">(required)</span></span>
+            <div class="field-heading">
+              <span class="field-label" data-en="Message" data-ru="Сообщение">Message</span>
+              <span class="required" data-en="(required)" data-ru="(required)">(required)</span>
+            </div>
             <textarea name="message" rows="4" required></textarea>
           </label>
 
-          <button type="submit" class="btn primary-btn form-submit">
+          <button type="submit" class="btn primary-btn form-submit" data-en="SEND MESSAGE" data-ru="ОТПРАВИТЬ СООБЩЕНИЕ">
             SEND MESSAGE
           </button>
         </form>
@@ -338,6 +354,34 @@
         }
       });
 
+      const langButtons = Array.from(document.querySelectorAll(".lang-btn"));
+      const translatableElements = Array.from(document.querySelectorAll("[data-en]"));
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        translatableElements.forEach((element) => {
+          const value = element.dataset[lang];
+          if (value !== undefined) {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+              element.placeholder = value;
+            } else {
+              element.textContent = value;
+            }
+          }
+        });
+
+        langButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
+        });
+      }
+
+      langButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          setLanguage(button.dataset.lang);
+        });
+      });
+
+      setLanguage("en");
       updateCarousel();
     </script>
   </body>
